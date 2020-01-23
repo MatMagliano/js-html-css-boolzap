@@ -8,12 +8,58 @@ body {
 
 }
 .wrapper {
+  display: flex;
   width: 100vw;
   height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+.background_main {
+  position: fixed;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
   background-color: #ece5dd;
 }
 .top_back {
   width: 100%;
   height: 100px;
   background-color: #128c7e;
+}
+.main_chat {
+  display: flex;
+  width: 80%;
+  height: 90%;
+  background-color: #fff;
+}
+
+/* CHAT LIST */
+.chat_list {
+  width: 35%;
+  height: 100%;
+  border-right: 1px solid silver;
+  background-color: coral;
+}
+.top_nav_list {
+  width: 100%;
+  height: 70px;
+  background-color: #E6E8E6;
+}
+.bottom_nav_list {
+  width: 100%;
+  height: 80px;
+  background-color: #82E1FF;
+}
+.chat_list input {
+  width: 95%;
+  height: 30px;
+  margin: 10px 10px;
+}
+
+
+/* CHAT MEX */
+.chat_mex {
+  width: 65%;
+  height: 100%;
+  background-color: lightyellow;
 }
