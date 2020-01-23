@@ -5,10 +5,15 @@
 }
 body {
   font-family: 'Rubik', sans-serif;
-  background-color: lightyellow;
+
 }
 .wrapper {
   width: 100vw;
   height: 100vh;
-  background-color: lightgreen;
+  background-color: #ece5dd;
+}
+.top_back {
+  width: 100%;
+  height: 100px;
+  background-color: #128c7e;
 }
