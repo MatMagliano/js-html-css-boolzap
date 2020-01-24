@@ -123,7 +123,28 @@
         <!-- /NAV CHAT -->
 
         <!-- CHAT CENTER -->
-        <div class="chat_center"></div>
+        <div class="chat_center">
+          <!-- SEND -->
+          <div class="message send">
+            <div class="message_top">
+              <p class="text_mex">Ciao come va?</p>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="message_bottom">
+              <time>17:00</time>
+            </div>
+          </div>
+          <!-- RECEIPTS -->
+          <div class="message receipts">
+            <div class="message_top">
+              <p class="text_mex">Ciao come va?</p>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="message_bottom">
+              <time>17:00</time>
+            </div>
+          </div>
+        </div>
         <!-- /CHAT CENTER -->
 
         <!-- FOOTER -->
@@ -133,10 +154,10 @@
               <i class="far fa-smile"></i>
             </div>
             <div class="text_mex">
-              <input type="text" name="messages" value="" placeholder="Scrivi un messaggio">
+              <input  type="text" class="send_message" name="messages" value="" placeholder="Scrivi un messaggio">
             </div>
             <div class="send_mex">
-              <i class="fas fa-paper-plane"></i>
+              <i class="fas fa-paper-plane icon_send"></i>
             </div>
           </div>
         </footer>
@@ -146,6 +167,21 @@
       <!-- /LEFT BOX -->
     </div>
   </main>
+
+  <!-- TEMPLATE -->
+  <div class="template">
+    <!-- SEND -->
+    <div class="message">
+      <div class="message_top">
+        <p class="message_text"></p>
+        <i class="fas fa-chevron-down"></i>
+      </div>
+      <div class="message_bottom">
+        <time></time>
+      </div>
+    </div>
+  </div>
+  <!-- TEMPLATE -->
 
   <script src="js/script.js" charset="utf-8"></script>
 </body>

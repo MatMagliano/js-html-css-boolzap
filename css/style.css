@@ -7,6 +7,12 @@ body {
   font-family: 'Rubik', sans-serif;
   font-size: 16px;
 }
+.none {
+  display: none;
+}
+.active {
+  display: block;
+}
 .wrapper {
   display: flex;
   width: 100vw;
@@ -198,7 +204,44 @@ body {
 .chat_center {
   width: 100%;
   height: calc(100% - 140px);
+  padding: 30px;
   background-image: url(../img/mine.jpg);
+}
+.send {
+  float: right;
+  width: 200px;
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #DCF8C6;
+  border-radius: 20px 0 20px 20px;
+  clear: both;
+}
+.message_bottom {
+  font-size: .7em;
+  text-align: right;
+  color: silver;
+}
+.receipts {
+  float: left;
+  width: 200px;
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 0 20px 20px 20px;
+  clear: both;
+}
+.message_top {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 3px;
+}
+.message_top i {
+  cursor: pointer;
+  color: silver;
+}
+.message_top p {
+  margin-bottom: 3px;
 }
 
 /* CHAT FOOTER */
