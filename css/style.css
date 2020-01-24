@@ -68,9 +68,30 @@ body {
   cursor: pointer;
 }
 .bottom_nav_list {
+  display: flex;
   width: 100%;
   height: 80px;
+  align-items: center;
   background-color: #82E1FF;
+}
+.bottom_nav_list i {
+  width: 57px;
+  height: 57px;
+  margin:  0 25px 0 20px;
+  font-size: 1.5em;
+  text-align: center;
+  line-height: 57px;
+  border-radius: 50px;
+  background-color: #fff;
+  color: #82E1FF;
+}
+.bottom_nav_list p {
+  padding-top: 10px;
+  font-size: 0.9em;
+}
+.bottom_nav_list p a {
+  color: grey;
+  text-decoration: underline;
 }
 .search_mess {
   margin: 10px;
