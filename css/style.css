@@ -149,9 +149,9 @@ body {
 .chat_mex {
   width: 65%;
   height: 100%;
-  background-color: lightyellow;
-  background-image: url(../img/mine.jpg);
 }
+
+/* CHAT NAV */
 .nav_chat_mex {
   display: flex;
   width: 100%;
@@ -192,4 +192,42 @@ body {
 .nav_chat_dx i:hover {
   color: grey;
   cursor: pointer;
+}
+
+/* CHAT CENTER */
+.chat_center {
+  width: 100%;
+  height: calc(100% - 140px);
+  background-image: url(../img/mine.jpg);
+}
+
+/* CHAT FOOTER */
+.chat_footer {
+  display: flex;
+  width: 100%;
+  height: 70px;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgba(236, 229, 221, .5);
+}
+.emoji i,
+.send_mex i {
+  font-size: 1.5em;
+  color: silver;
+}
+.emoji i:hover,
+.send_mex i:hover {
+  cursor: pointer;
+  color: grey;
+}
+.text_mex {
+  width: 80%;
+}
+.text_mex input{
+  width: 100%;
+  height: 40px;
+  padding: 0 10px;
+}
+.text_mex input:focus{
+  outline: none;
 }
