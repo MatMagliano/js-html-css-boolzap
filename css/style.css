@@ -7,11 +7,8 @@ body {
   font-family: 'Rubik', sans-serif;
   font-size: 16px;
 }
-.none {
+.template{
   display: none;
-}
-.active {
-  display: block;
 }
 .wrapper {
   display: flex;
@@ -54,7 +51,7 @@ body {
   background-color: #E6E8E6;
 }
 .top_nav_list img {
-  width: 15%;
+  width: 60px;
   margin: 0 15px;
   border-radius: 50px;
 }
@@ -134,7 +131,7 @@ body {
   cursor: pointer;
 }
 .contact img{
-  width: 15%;
+  width: 60px;
   margin: 0 15px;
   border-radius: 50px;
 }
@@ -167,7 +164,7 @@ body {
   background-color: #E6E8E6;
 }
 .nav_chat_mex img{
-  width: 8%;
+  width: 60px;
   margin: 0 15px;
   border-radius: 50px;
 }
@@ -202,16 +199,24 @@ body {
 
 /* CHAT CENTER */
 .chat_center {
+  display: none;
   width: 100%;
   height: calc(100% - 140px);
   padding: 30px;
   background-image: url(../img/mine.jpg);
+  overflow-y: scroll;
 }
-.send {
-  float: right;
-  width: 200px;
-  margin-bottom: 10px;
+.chat_center.active {
+  display: block;
+}
+.message {
+  min-width: 30%;
+  max-width: 60%;
   padding: 10px;
+  margin: 10px;
+}
+.message.send {
+  float: right;
   background-color: #DCF8C6;
   border-radius: 20px 0 20px 20px;
   clear: both;
@@ -266,11 +271,11 @@ body {
 .text_mex {
   width: 80%;
 }
-.text_mex input{
-  width: 100%;
+.send_message {
+  width: 80%;
   height: 40px;
   padding: 0 10px;
 }
-.text_mex input:focus{
+.send_message:focus{
   outline: none;
 }

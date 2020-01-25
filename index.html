@@ -49,49 +49,49 @@
         </div>
         <div class="box_list">
           <ul class="contact_list">
-            <li class="contact">
+            <li class="contact" data-contact='0'>
               <img src="img/avatar_2.jpg" alt="">
               <div class="name_contact">
                 <p>Paolo</p>
                 <time>17:00</time>
               </div>
             </li>
-            <li class="contact">
+            <li class="contact" data-contact='1'>
               <img src="img/avatar_1.jpg" alt="">
               <div class="name_contact">
                 <p>Michele</p>
                 <time>12:30</time>
               </div>
             </li>
-            <li class="contact">
+            <li class="contact" data-contact='2'>
               <img src="img/avatar_3.jpg" alt="">
               <div class="name_contact">
                 <p>Samuele</p>
                 <time>11:21</time>
               </div>
             </li>
-            <li class="contact">
+            <li class="contact" data-contact='3'>
               <img src="img/avatar_7.jpg" alt="">
               <div class="name_contact">
                 <p>Davide</p>
                 <time>10:37</time>
               </div>
             </li>
-            <li class="contact">
+            <li class="contact" data-contact='4'>
               <img src="img/avatar_5.jpg" alt="">
               <div class="name_contact">
                 <p>Alessandro L.</p>
                 <time>10:11</time>
               </div>
             </li>
-            <li class="contact">
+            <li class="contact" data-contact='5'>
               <img src="img/avatar_6.jpg" alt="">
               <div class="name_contact">
                 <p>Claudia</p>
                 <time>09:27</time>
               </div>
             </li>
-            <li class="contact">
+            <li class="contact" data-contact='6'>
               <img src="img/avatar_4.jpg" alt="">
               <div class="name_contact">
                 <p>Alessandro B.</p>
@@ -123,65 +123,62 @@
         <!-- /NAV CHAT -->
 
         <!-- CHAT CENTER -->
-        <div class="chat_center">
+        <div class="chat_center active" data-contact='0'>
           <!-- SEND -->
           <div class="message send">
             <div class="message_top">
-              <p class="text_mex">Ciao come va?</p>
+              <p class="message_text">Ciao come va?</p>
               <i class="fas fa-chevron-down"></i>
             </div>
             <div class="message_bottom">
-              <time>17:00</time>
+              <small class="message_time">17:00</small>
             </div>
           </div>
           <!-- RECEIPTS -->
           <div class="message receipts">
             <div class="message_top">
-              <p class="text_mex">Ciao come va?</p>
+              <p class="message_text">Ciao come va?</p>
               <i class="fas fa-chevron-down"></i>
             </div>
             <div class="message_bottom">
-              <time>17:00</time>
+              <small class="message_time">17:00</small>
             </div>
           </div>
         </div>
         <!-- /CHAT CENTER -->
 
         <!-- FOOTER -->
-        <footer>
-          <div class="chat_footer">
-            <div class="emoji">
-              <i class="far fa-smile"></i>
-            </div>
-            <div class="text_mex">
-              <input  type="text" class="send_message" name="messages" value="" placeholder="Scrivi un messaggio">
-            </div>
-            <div class="send_mex">
-              <i class="fas fa-paper-plane icon_send"></i>
-            </div>
+
+        <div class="chat_footer">
+          <div class="emoji">
+            <i class="far fa-smile"></i>
           </div>
-        </footer>
+          <input  type="text" class="send_message" name="messages" value="" placeholder="Scrivi un messaggio">
+          <div class="send_mex">
+            <i class="fas fa-paper-plane icon_send"></i>
+          </div>
+        </div>
+
 
         <!-- /FOOTER -->
       </div>
       <!-- /LEFT BOX -->
     </div>
-  </main>
-
-  <!-- TEMPLATE -->
-  <div class="template">
-    <!-- SEND -->
-    <div class="message">
-      <div class="message_top">
-        <p class="message_text"></p>
-        <i class="fas fa-chevron-down"></i>
-      </div>
-      <div class="message_bottom">
-        <time></time>
+    <!-- TEMPLATE -->
+    <div class="template">
+      <div class="message">
+        <div class="message_top">
+          <p class="message_text"></p>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="message_bottom">
+          <small class="message_time"></small>
+        </div>
       </div>
     </div>
-  </div>
-  <!-- TEMPLATE -->
+    <!-- TEMPLATE -->
+  </main>
+
 
   <script src="js/script.js" charset="utf-8"></script>
 </body>
