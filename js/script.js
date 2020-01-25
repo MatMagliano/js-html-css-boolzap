@@ -3,6 +3,11 @@ $(document).ready(function(){
   $('.icon_send').click(function(){
     sendMessage();
   });
+  $('.send_message').keyup(function(){
+    if (event.which == 13) {
+      sendMessage();
+    }
+  });
 
   // SEARCH CHAT
   $('.search_contact').on('keyup', function() {
