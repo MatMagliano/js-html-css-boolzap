@@ -5,6 +5,7 @@ $(document).ready(function(){
   });
 });
 
+// SEND MESSAGES
 function sendMessage() {
   var textMessage = $('input.send_message').val();
   console.log(textMessage );
@@ -23,10 +24,23 @@ function sendMessage() {
     $('.chat_center').append(newMessage);
     $('input.send_message').val('');
 
+    // RECEIPTS MESSAGES
+    setTimeout(function() {
+      var receiptsMessage = $('.template .message').clone();
+      receiptsMessage.find('.message_text').text('ok')
+      receiptsMessage.find('.message_time').text(time);
+      receiptsMessage.addClass('receipts');
+      $('.chat_center').append(receiptsMessage);
+    }, 2000);
+
   }
 }
 
 
+
+
+
+// ADD ZERO TIME
 function addZero(number) {
   if (number < 10) {
     number = '0' * number
