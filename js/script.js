@@ -3,6 +3,15 @@ $(document).ready(function(){
   $('.icon_send').click(function(){
     sendMessage();
   });
+
+  // SEARCH CHAT
+  $('.search_contact').on('keyup', function() {
+    var value = $(this).val().toLowerCase();
+    $('.contact_list .contact').filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value)> -1)
+    });
+  });
+
 });
 
 // SEND MESSAGES
@@ -35,7 +44,6 @@ function sendMessage() {
 
   }
 }
-
 
 
 
