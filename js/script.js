@@ -11,16 +11,17 @@ $(document).ready(function(){
   });
 
   // OPTION CHAT
-  $('.message_top i').mouseenter(
+  $(document).on('click', '.option_icon',
     function() {
-      $('.drop').removeClass('active');
-      $(this).next('.drop').addClass('active');
+        $('.drop').removeClass('active');
+        $(this).next('.drop').toggleClass('active');
       }
     );
-
-    $('main').click(function () {
-    $('.drop').removeClass('active');
-  });
+  $(document).on('click','.delete_box_mess',
+    function() {
+        $(this).parents('.message').remove();
+      }
+    );
 
 
   // SEARCH CHAT

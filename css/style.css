@@ -38,8 +38,8 @@ body {
 .none {
   display: none;
 }
-.active {
-  display: block;
+ul {
+  list-style: none;
 }
 
 /* CHAT LIST */
@@ -228,16 +228,17 @@ body {
   position: relative;
 }
 .drop{
-position: absolute;
-top: 20px;
-left: 60px;
-width: 150px;
-height: 80px;
-font-size: .91em;
-background-color: #fff;
+  display: none;
+  position: absolute;
+  top: 20px;
+  left: 60px;
+  width: 150px;
+  height: 80px;
+  font-size: .91em;
+  background-color: #fff;
 }
-.option_mess ul {
-  list-style: none;
+.drop.active {
+  display: block;
 }
 .option_box {
   width: 150px;
