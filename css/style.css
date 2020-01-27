@@ -35,6 +35,12 @@ body {
   height: 90%;
   background-color: #fff;
 }
+.none {
+  display: none;
+}
+.active {
+  display: block;
+}
 
 /* CHAT LIST */
 .chat_list {
@@ -209,16 +215,45 @@ body {
 .chat_center.active {
   display: block;
 }
+.chat_center.none {
+  display: none;
+}
 .message {
   min-width: 30%;
   max-width: 60%;
   padding: 10px;
   margin: 10px;
 }
+.message_top {
+  position: relative;
+}
+.drop{
+position: absolute;
+top: 20px;
+left: 60px;
+width: 150px;
+height: 80px;
+font-size: .91em;
+background-color: #fff;
+}
+.option_mess ul {
+  list-style: none;
+}
+.option_box {
+  width: 150px;
+  height: 40px;
+  padding-left: 20px;
+  line-height: 40px;
+}
+.option_box:hover {
+  cursor: pointer;
+  background-color: #e6e8e6;
+}
 .message.send {
   float: right;
   background-color: #DCF8C6;
   border-radius: 20px 0 20px 20px;
+  box-shadow: -10px 10px 17px -10px rgba(13,13,13,0.28);
   clear: both;
 }
 .message_bottom {
@@ -228,11 +263,9 @@ body {
 }
 .receipts {
   float: left;
-  width: 200px;
-  margin-bottom: 10px;
-  padding: 10px;
   background-color: #fff;
   border-radius: 0 20px 20px 20px;
+  box-shadow: 10px 10px 17px -8px rgba(13,13,13,0.28);
   clear: both;
 }
 .message_top {
@@ -244,6 +277,9 @@ body {
 .message_top i {
   cursor: pointer;
   color: silver;
+}
+.message_top:hover i {
+  visibility: visible;
 }
 .message_top p {
   margin-bottom: 3px;

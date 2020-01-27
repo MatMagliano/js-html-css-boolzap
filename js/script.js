@@ -1,5 +1,6 @@
 $(document).ready(function(){
-  //alert('Ciao')
+
+  // SEND MESSAGE
   $('.icon_send').click(function(){
     sendMessage();
   });
@@ -8,6 +9,19 @@ $(document).ready(function(){
       sendMessage();
     }
   });
+
+  // OPTION CHAT
+  $('.message_top i').mouseenter(
+    function() {
+      $('.drop').removeClass('active');
+      $(this).next('.drop').addClass('active');
+      }
+    );
+
+    $('main').click(function () {
+    $('.drop').removeClass('active');
+  });
+
 
   // SEARCH CHAT
   $('.search_contact').on('keyup', function() {
@@ -26,9 +40,7 @@ function sendMessage() {
   if (textMessage.length != 0) {
     var newMessage = $('.template .message').clone();
     console.log(newMessage);
-
     newMessage.find('.message_text').text(textMessage);
-
     var date = new Date();
     var hours = addZero(date.getHours());
     var minutes = addZero(date.getMinutes());
@@ -46,12 +58,8 @@ function sendMessage() {
       receiptsMessage.addClass('receipts');
       $('.chat_center').append(receiptsMessage);
     }, 2000);
-
   }
 }
-
-
-
 
 // ADD ZERO TIME
 function addZero(number) {
