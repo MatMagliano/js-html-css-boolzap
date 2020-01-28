@@ -15,15 +15,18 @@ $(document).ready(function(){
     function() {
         $('.drop').removeClass('active');
         $(this).next('.drop').toggleClass('active');
-      }
-    );
+      });
+  $(document).on('dblclick', '.option_icon',
+    function() {
+        $('.drop').removeClass('active');
+        $(this).next('.drop').removeClass('active');
+      });
 
   // DELETE OPTION
   $(document).on('click','.delete_box_mess',
     function() {
         $(this).parents('.message').remove();
-      }
-    );
+      });
 
   // SEARCH CHAT
   $('.search_contact').on('keyup',
@@ -46,11 +49,27 @@ $(document).ready(function(){
           $(this).addClass('active')
         }
       });
+      var name = $(this).find('.name_contact p').text();
+      var time = $(this).find('.name_contact time').text();
+      var img = $(this).find('.avatar img').attr('src');
+      $('.chat_mex .nav_chat_mex .nav_chat_center p').text(name);
+      $('.chat_mex .nav_chat_mex .nav_chat_center small time').text(time);
+      $('.chat_mex .nav_chat_mex img').attr('src', img);
     });
+
+  // CHANGE SEND ICON
+  $('.send_message').focus(function(){
+    $('.send_mex i').removeClass('fa fa-microphone').addClass('fas fa-paper-plane');
+  }).blur(function(){
+    $('.send_mex i').removeClass('fas fa-paper-plane').addClass('fa fa-microphone');
+  });
 
 });
 
-// SEND MESSAGES
+
+// ------- FUNZIONI ------------
+
+// SEND&RECEIPTS MESSAGES
 function sendMessage() {
   var textMessage = $('input.send_message').val();
   console.log(textMessage );
@@ -64,7 +83,7 @@ function sendMessage() {
     var time = hours + ':' + minutes;
     newMessage.find('.message_time').text(time);
     newMessage.addClass('send');
-    $('.chat_center').append(newMessage);
+    $('.chat_center.active').append(newMessage);
     $('input.send_message').val('');
 
     // RECEIPTS MESSAGES
@@ -73,7 +92,7 @@ function sendMessage() {
       receiptsMessage.find('.message_text').text('ok')
       receiptsMessage.find('.message_time').text(time);
       receiptsMessage.addClass('receipts');
-      $('.chat_center').append(receiptsMessage);
+      $('.chat_center.active').append(receiptsMessage);
     }, 2000);
   }
 }

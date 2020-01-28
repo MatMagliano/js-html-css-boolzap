@@ -136,6 +136,9 @@ ul {
   background-color: #e6e8e6;
   cursor: pointer;
 }
+.contact.active {
+  background-color: #e6e8e6;
+}
 .contact img{
   width: 60px;
   margin: 0 15px;
@@ -217,7 +220,7 @@ ul {
 }
 .message {
   min-width: 30%;
-  max-width: 60%;
+  max-width: 70%;
   padding: 10px;
   margin: 10px;
 }
@@ -273,6 +276,7 @@ ul {
   margin-bottom: 3px;
 }
 .message_top i {
+  visibility: hidden;
   cursor: pointer;
   color: silver;
 }
