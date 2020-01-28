@@ -215,9 +215,6 @@ ul {
 .chat_center.active {
   display: block;
 }
-.chat_center.none {
-  display: none;
-}
 .message {
   min-width: 30%;
   max-width: 60%;

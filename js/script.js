@@ -17,20 +17,36 @@ $(document).ready(function(){
         $(this).next('.drop').toggleClass('active');
       }
     );
+
+  // DELETE OPTION
   $(document).on('click','.delete_box_mess',
     function() {
         $(this).parents('.message').remove();
       }
     );
 
-
   // SEARCH CHAT
-  $('.search_contact').on('keyup', function() {
+  $('.search_contact').on('keyup',
+  function() {
     var value = $(this).val().toLowerCase();
     $('.contact_list .contact').filter(function() {
       $(this).toggle($(this).text().toLowerCase().indexOf(value)> -1)
     });
   });
+
+  //CAMBIO CHAT
+  $(document).on('click', '.contact',
+    function() {
+      $('.contact').removeClass('active');
+      $(this).addClass('active')
+      var userData = $(this).attr('data-contact');
+      $('.chat_center').removeClass('active')
+      $('.chat_center').each(function() {
+        if ($(this).attr('data-contact') == userData) {
+          $(this).addClass('active')
+        }
+      });
+    });
 
 });
 
